@@ -24,4 +24,6 @@ urlpatterns = [
     path(",views.index,name='index"),
     path('admin/', admin.site.urls),
     #path(",include('learning_logs.urls')),
+    # Página que mostra todos os tópicos
+    path('topics/',views.topics, name='topic')
 ]
