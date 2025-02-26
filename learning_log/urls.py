@@ -25,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path(",include('learning_logs.urls')),
     # Página que mostra todos os tópicos
-    path('topics/<int:topic_id>/',views.topics, name='topic')
+    path('topics/<int:topic_id>/',views.topics, name='topics'),
+    path('new_topic/',views.new_topic,name='new_topic')
 ]

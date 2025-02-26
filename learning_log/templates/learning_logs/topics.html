@@ -3,10 +3,15 @@
 {% block content %}
 
 <p>Topics</p>
-
+<p>Entires:</p>
 <ul>
     {% for topic in topics %}
-    <li>{{topic.text}}</li>
+    <li>
+    <p>{{entry.date_added|date:'M d,Y H:i'}}</p>
+    <a href="{ % url 'learning_logs:topic'topic.id%}">{{topic.text}}</a>
+    </li>
+    {% empty %}
+    <li>There are no entries for this topic yet.</li>
     {% endfor %}
 </ul>
 
