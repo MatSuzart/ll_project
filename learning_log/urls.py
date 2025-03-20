@@ -23,6 +23,7 @@ urlpatterns = [
     #Página inicial
     path(",views.index,name='index"),
     path('admin/', admin.site.urls),
+    path('accounts/',include('accounts.urls')),
     #path(",include('learning_logs.urls')),
     # Página que mostra todos os tópicos
     path('topics/<int:topic_id>/',views.topics, name='topics'),
