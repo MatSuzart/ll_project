@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 # Minhas Configurações
 
 LOGIN_REDIRECT_URL ='learning_logs:index'
+LOGOUT_REDIRECT_URL = 'learning_logs:index'
+LOGIN_URL = 'accounts:login'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
